@@ -109,10 +109,10 @@ application = thorpy.Application((320,480), "OctoPy")
 #button1 = thorpy.make_button("Non-blocking version", func=my_choices_1)
 #button2 = thorpy.make_button("Blocking version", func=my_choices_2)
 
-#background = thorpy.Background.make(elements=[button1,button2])
-#thorpy.store(background)
+title = thorpy.make_text("Status:", 5, (0,0,0))
 
-thorpy.make_text("Status:", 5, (0,0,0))
+background = thorpy.Background.make(elements=[title])
+thorpy.store(background)
 
 menu = thorpy.Menu(background)
 menu.play()
