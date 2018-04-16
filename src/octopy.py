@@ -26,8 +26,6 @@ os.putenv('SDL_MOUSEDEV', '/dev/input/touchscreen')
 timezone = "US/Central";
 ds = u'\N{DEGREE SIGN}'
 
-signal.signal(signal.SIGINT, ctrlC)
-
 def backLight(state):
     file = open("/sys/class/backlight/soc:backlight/brightness","w") 
     file.write(state)
@@ -103,6 +101,8 @@ def my_choices_2():
     choices = [("I like blue",set_blue), ("No! red",set_red), ("cancel",None)]
     thorpy.launch_blocking_choices("Blocking choices box!\n", choices, parent=background) #for auto unblit
     print("This sentence will print only after you clicked ok")
+
+signal.signal(signal.SIGINT, ctrlC)
 
 application = thorpy.Application((320,480), "OctoPy")
 
