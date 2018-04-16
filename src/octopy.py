@@ -26,7 +26,7 @@ os.putenv('SDL_MOUSEDEV', '/dev/input/touchscreen')
 timezone = "US/Central";
 ds = u'\N{DEGREE SIGN}'
 
-signal.signal(signal.SIGINT, ctrl_c)
+signal.signal(signal.SIGINT, ctrlC)
 
 def backLight(state):
     file = open("/sys/class/backlight/soc:backlight/brightness","w") 
