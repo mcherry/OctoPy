@@ -63,7 +63,7 @@ def getHeaders():
     return headers
 
 def ctrlC(signal, frame):
-    pygame.quit() 
+    application.quit() 
 
 def getInfo(api_path):
     response = requests.get("http://octopi.inditech.org/api/" + api_path, headers = getHeaders())
