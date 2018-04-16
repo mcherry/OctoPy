@@ -103,9 +103,10 @@ def my_choices_2():
     print("This sentence will print only after you clicked ok")
 
 signal.signal(signal.SIGINT, ctrlC)
-pygame.mouse.set_visible(False)
 
 application = thorpy.Application((320,480), "OctoPy")
+
+pygame.mouse.set_visible(False)
 
 #button1 = thorpy.make_button("Non-blocking version", func=my_choices_1)
 #button2 = thorpy.make_button("Blocking version", func=my_choices_2)
