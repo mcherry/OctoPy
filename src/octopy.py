@@ -106,11 +106,13 @@ signal.signal(signal.SIGINT, ctrlC)
 
 application = thorpy.Application((320,480), "OctoPy")
 
-button1 = thorpy.make_button("Non-blocking version", func=my_choices_1)
-button2 = thorpy.make_button("Blocking version", func=my_choices_2)
+#button1 = thorpy.make_button("Non-blocking version", func=my_choices_1)
+#button2 = thorpy.make_button("Blocking version", func=my_choices_2)
 
-background = thorpy.Background.make(elements=[button1,button2])
-thorpy.store(background)
+#background = thorpy.Background.make(elements=[button1,button2])
+#thorpy.store(background)
+
+thorpy.make_text("Status:", 5, (0,0,0))
 
 menu = thorpy.Menu(background)
 menu.play()
