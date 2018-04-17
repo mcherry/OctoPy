@@ -105,7 +105,6 @@ def my_choices_2():
 signal.signal(signal.SIGINT, ctrlC)
 
 application = thorpy.Application((320,480), "OctoPy")
-
 pygame.mouse.set_visible(False)
 
 #button1 = thorpy.make_button("Non-blocking version", func=my_choices_1)
